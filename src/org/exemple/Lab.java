@@ -12,7 +12,7 @@ public class Lab {
 
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
-        ArraySequencial sequencial = new ArraySequencial<Cliente>();
+        ArraySequencial<Cliente> sequencial = new ArraySequencial<Cliente>();
         Cliente cliente = new Cliente();
 
         boolean on = true;
@@ -38,6 +38,8 @@ public class Lab {
                     String tipoPessoa;
                     String tipoConta;
 
+                    System.out.println(sequencial.getSize());
+
                     System.out.println("Insira o nome: ");
                     cliente.setNome(leitor.next());
                     System.out.println("Insira o cpf: ");
@@ -60,11 +62,13 @@ public class Lab {
 
                     if (Objects.equals(tipoConta, "sim")){
                         cliente.setAccont(TypeAccont.CONTA_CORRENTE);
+                        sequencial.insere(cliente);
                     }
                     else {
                         cliente.setAccont(TypeAccont.CONTA_POUPACA);
+                        sequencial.insere(cliente);
                     }
-                    sequencial.insere(cliente);
+
 
                     break;
                 case 2:
@@ -72,7 +76,7 @@ public class Lab {
                     System.out.println("qual cliente você deseja consultar: ");
                     int pos = leitor.nextInt();
 
-                   Cliente cliente1 = (Cliente) sequencial.elementAt(pos);
+                   Cliente cliente1 = sequencial.elementAt(pos);
 
                     System.out.println("Nome: " + cliente1.getNome());
                     System.out.println("CPF: " + cliente1.getCpf());

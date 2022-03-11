@@ -1,5 +1,7 @@
 package org.exemple.util;
 
+import org.exemple.model.Cliente;
+
 public class ArraySequencial<T> {
 
     //Atributos da classe
@@ -41,7 +43,7 @@ public class ArraySequencial<T> {
     }
 
 
-    public void insere(T novo, int posicao)throws ArrayIndexOutOfBoundsException{
+    public void atualizar(T novo, int posicao)throws ArrayIndexOutOfBoundsException{
 
         if (posicao < 0 || posicao >= posicaoAtual) {
             throw new ArrayIndexOutOfBoundsException("Deu krepa");

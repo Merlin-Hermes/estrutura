@@ -19,6 +19,8 @@ public class Lab {
 
         while (on) {
 
+
+
             int escolha;
 
             System.out.println("--------------------------------------");

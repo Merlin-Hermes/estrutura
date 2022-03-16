@@ -10,7 +10,7 @@ public class ArraySequencial<T> {
     private int posicaoAtual = 0;
 
     public ArraySequencial() {
-        array = (T[]) new Object[tamanho];
+        this.array = (T[]) new Object[tamanho];
     }
 
 

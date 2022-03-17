@@ -1,7 +1,5 @@
 package org.exemple.util;
 
-import org.exemple.model.Cliente;
-
 public class ArraySequencial<T> {
 
     //Atributos da classe
